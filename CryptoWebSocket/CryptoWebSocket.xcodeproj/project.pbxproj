@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65BD308613A9272B3CED3DD8 /* Pods_CryptoWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E59BAC318584F95AD93A3C /* Pods_CryptoWebSocket.framework */; };
 		8E8DCE2829D5B76B0056FF80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE2729D5B76B0056FF80 /* AppDelegate.m */; };
 		8E8DCE2B29D5B76B0056FF80 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE2A29D5B76B0056FF80 /* SceneDelegate.m */; };
 		8E8DCE2E29D5B76B0056FF80 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE2D29D5B76B0056FF80 /* ViewController.m */; };
@@ -29,6 +30,9 @@
 		8E8DCE3529D5B76D0056FF80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E8DCE3729D5B76D0056FF80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E8DCE3829D5B76D0056FF80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3E59BAC318584F95AD93A3C /* Pods_CryptoWebSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoWebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B836495FA295B00214EDBD3D /* Pods-CryptoWebSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoWebSocket.release.xcconfig"; path = "Target Support Files/Pods-CryptoWebSocket/Pods-CryptoWebSocket.release.xcconfig"; sourceTree = "<group>"; };
+		DD4062F8A8938A4F0ADBEE95 /* Pods-CryptoWebSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoWebSocket.debug.xcconfig"; path = "Target Support Files/Pods-CryptoWebSocket/Pods-CryptoWebSocket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +40,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65BD308613A9272B3CED3DD8 /* Pods_CryptoWebSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		277A8C9DC8B9800EA334A8DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD4062F8A8938A4F0ADBEE95 /* Pods-CryptoWebSocket.debug.xcconfig */,
+				B836495FA295B00214EDBD3D /* Pods-CryptoWebSocket.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5EC6E9B6E981F63597F08518 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3E59BAC318584F95AD93A3C /* Pods_CryptoWebSocket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E8DCE1A29D5B76B0056FF80 = {
 			isa = PBXGroup;
 			children = (
 				8E8DCE2529D5B76B0056FF80 /* CryptoWebSocket */,
 				8E8DCE2429D5B76B0056FF80 /* Products */,
+				277A8C9DC8B9800EA334A8DB /* Pods */,
+				5EC6E9B6E981F63597F08518 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E8DCE3C29D5B76D0056FF80 /* Build configuration list for PBXNativeTarget "CryptoWebSocket" */;
 			buildPhases = (
+				1898455DBE092E316E9BB0BB /* [CP] Check Pods Manifest.lock */,
 				8E8DCE1F29D5B76B0056FF80 /* Sources */,
 				8E8DCE2029D5B76B0056FF80 /* Frameworks */,
 				8E8DCE2129D5B76B0056FF80 /* Resources */,
+				CD52332BCEBFAAF5F514AE7F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1898455DBE092E316E9BB0BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoWebSocket-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD52332BCEBFAAF5F514AE7F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoWebSocket/Pods-CryptoWebSocket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoWebSocket/Pods-CryptoWebSocket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoWebSocket/Pods-CryptoWebSocket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E8DCE1F29D5B76B0056FF80 /* Sources */ = {
@@ -287,6 +356,7 @@
 		};
 		8E8DCE3D29D5B76D0056FF80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD4062F8A8938A4F0ADBEE95 /* Pods-CryptoWebSocket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +384,7 @@
 		};
 		8E8DCE3E29D5B76D0056FF80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B836495FA295B00214EDBD3D /* Pods-CryptoWebSocket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
